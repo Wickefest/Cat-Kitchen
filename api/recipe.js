@@ -1,21 +1,10 @@
-import express from "express";
-import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
+// /api/recipe.js
 
-dotenv.config();
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
-const app = express();
-const PORT = process.env.PORT || 3000;
-const CAT_KITCHEN_API_KEY = process.env.CAT_KITCHEN_API_KEY;
-
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
-
-app.use(express.json());
-app.use(express.static(dirname));
-
-app.post("/api/generate-recipe", async (req, res) => {
   const { catType, catWeight, catAge, catHobby, catNotes } = req.body;
 
   if (!catType || !catHobby) {
@@ -79,7 +68,7 @@ app.post("/api/generate-recipe", async (req, res) => {
 
   try {
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${CAT_KITCHEN_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${process.env.CAT_KITCHEN_API_KEY}`,
       {
         method: "POST",
         headers: {
@@ -96,24 +85,18 @@ app.post("/api/generate-recipe", async (req, res) => {
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!text) {
-      console.error("Chef response:", data);
       return res.status(500).json({
-        error: "Sorry, chef's currently busy"
+        error: "Sorry, the chef's currently busy. Please try again later"
       });
     }
 
     const cleanedText = text.replace(/```html/g, "").replace(/```/g, "");
 
-    res.json({ html: cleanedText });
+    return res.status(200).json({ html: cleanedText });
+
   } catch (error) {
-    console.error(error);
-    res.status(500).json({
-      error: "Can't contact Chef. Apologies."
+    return res.status(500).json({
+      error: "Chef's has been kidnapped. Something is unexpectedly wrong. HELP"
     });
   }
-});
-
-// Checks
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+}

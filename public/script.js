@@ -22,7 +22,7 @@ async function generateRecipe() {
   resultArea.style.display = "none";
 
   try {
-    const response = await fetch("/api/generate-recipe", {
+    const response = await fetch("/api/recipe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -48,7 +48,7 @@ async function generateRecipe() {
     console.error(error);
     reportContent.innerHTML = `
       <p style="color:var(--google-red)">
-        The Kitchen is currently busy!: ${error.message}
+        The kitchen is currently busy!: ${error.message}
       </p>
     `;
     resultArea.style.display = "block";
