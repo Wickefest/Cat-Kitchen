@@ -86,7 +86,7 @@ export default async function handler(req, res) {
 
     if (!text) {
       return res.status(500).json({
-        error: "Sorry, the chef's currently busy. Please try again later"
+        error: "Sorry, the chef's currently busy. Please try again later."
       });
     }
 
@@ -100,3 +100,7 @@ export default async function handler(req, res) {
     });
   }
 }
+
+console.log("API HIT");
+
+console.log("API KEY:", process.env.CAT_KITCHEN_API_KEY ? "EXISTS" : "MISSING");
