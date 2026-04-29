@@ -80,13 +80,7 @@ export default async function handler(req, res) {
       }
     );
 
-    // const data = await response.json();
-
-    const raw = await response.text();
-    console.log("RAW GEMINI RESPONSE:", raw);
-
-    const data = JSON.parse(raw);
-
+    const data = await response.json();
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!text) {
@@ -105,3 +99,8 @@ export default async function handler(req, res) {
     });
   }
 }
+
+console.log(
+  "API KEY:",
+  process.env.CAT_KITCHEN_API_KEY ? "EXISTS" : "MISSING"
+);
