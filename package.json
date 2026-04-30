@@ -1,18 +1,12 @@
 {
   "name": "cat-kitchen",
   "version": "1.0.0",
+  "description": "AI-powered recipe generator for cats",
   "type": "module",
-  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev" : "vercel"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1"
-  }
+  "keywords": ["cat-kitchen", "cat chef", "cat recipe", "gemini", "vercel"],
+  "author": "Alexander",
+  "license": "MIT"
 }
