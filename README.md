@@ -10,6 +10,8 @@
   See cats everyday in your neighborhood? Might as well experiment with this AI cat recipe generator!
   
 [![Live](https://img.shields.io/badge/Live%20App-Cat%20Kitchen-34A853?style=for-the-badge&logo=vercel&logoColor=blue)](https://cat-kitchen.vercel.app)
+Music Credit: https://youtu.be/kj1MDJXJ7-I?si=rS0xFMkktreNcBg4 [Boba Date] Please support the original creator!!
+  
 </div>
 
 ---
