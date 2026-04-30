@@ -100,7 +100,3 @@ export default async function handler(req, res) {
   }
 }
 
-console.log(
-  "API KEY:",
-  process.env.CAT_KITCHEN_API_KEY ? "EXISTS" : "MISSING"
-);
