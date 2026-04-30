@@ -21,8 +21,6 @@
 - **Music**: *Boba Date* - [Youtube](https://youtu.be/kj1MDJXJ7-I?si=rS0xFMkktreNcBg4).
 Please support the original creator !!!
 
----
-
 ### 👨‍🍳 AI Chef Consultant
 This "chef" will provide you a recipe based on the cat's type, weight, age, hobby and habit. Get interesting and fun recipes from the chef! 
 
