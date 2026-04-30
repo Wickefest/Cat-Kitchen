@@ -8,18 +8,18 @@
   
   See cats everyday in your neighborhood? Might as well experiment with this AI cat recipe generator!
   
-[![Live App](https://img.shields.io/badge/Live%20App-Cat%20Kitchen-34A853?style=for-the-badge&logo=vercel&logoColor=blue)](https://cat-kitchen.vercel.app)
+[![Live ](https://img.shields.io/badge/Live%20App-Cat%20Kitchen-34A853?style=for-the-badge&logo=vercel&logoColor=red)](https://cat-kitchen.vercel.app)
 </div>
 
 ---
 
 ## Check this out!
 
-### AI Chef Consultant
+### 👨‍🍳 AI Chef Consultant
 This "chef" will provide you a recipe based on the cat's type, weight, age, hobby and habit. Get interesting and fun recipes from the chef! 
 
-## Disclaimer
+## ⚠️ DISCLAIMER ⚠️
 This recipe is AI generated and are not meant to be serious. Please do not follow the recipe to create the dish, and feed to stray animals. This project is just for fun AND only FUN!
 
 <div align="center">
-Made for Gemin-I-can't Even Hackathon (Google). Super fun to do this kind of project!
+Made for Gemin-I-can't Even Hackathon (Google). Super fun to do this kind of project!❤️
