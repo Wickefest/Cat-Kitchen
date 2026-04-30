@@ -54,11 +54,7 @@ export default async function handler(req, res) {
     4. <div class="reasoning">
         <strong>Why This Matches:</strong> Explain clearly why these ingredients suit the cat's weight, age, and behavior. Focus on protein needs, digestion, and energy.
       </div>
-    <hr>
-    5. <div class="gentle-warning">
-        <em> Note: This is a general nutritional suggestion, not a complete or balanced diet plan. Always consult a veterinarian before making changes to your cat's diet.</em>
-      </div>
-
+  
     Guidelines: 
      - Keep tone professional but warm, like a careful chef.
      - Avoid fantasy ingredients completely.
@@ -95,7 +91,7 @@ export default async function handler(req, res) {
 
   } catch (error) {
     return res.status(500).json({
-      error: "Chef's has been kidnapped. Something is unexpectedly wrong. HELP"
+      error: "Chef's has been kidnapped. Something is unexpectedly wrong. HELP!"
     });
   }
 }
